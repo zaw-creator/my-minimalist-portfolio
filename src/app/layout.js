@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import IconNavbar from "./components/nav";
+import StarParticles from "./particles/starbg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`} style={{ boxSizing: "border-box" }}>
+          <StarParticles />
+        <IconNavbar />
         {children}
       </body>
     </html>
