@@ -20,6 +20,7 @@
     "next": "15.3.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-github-calendar": "^4.5.9",
     "react-tsparticles": "^2.12.2",
     "tailwindcss": "^1.9.6",
     "tsparticles": "^3.8.1",
