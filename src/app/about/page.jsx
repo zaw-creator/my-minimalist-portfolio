@@ -6,81 +6,65 @@ import Experiences from "../components/experiences";
 import Box from '@mui/material/Box';
 import Educationdata from "../components/education";
 
+const FirstRow =[
+  "JavaScript",
+  "React",
+  "Three.js",
+  "WebGL",
+  "ASP.NET",
+  "Mongodb",
+  "Mongoose",
+  "MsSQL",
+  "Material UI",
+  "GSAP"
+];
+const secondRow = [
+  "Express",
+  "Rest Api",
+  "Spline",
+  "Azure",
+  "React Hook Form",
+  "Particle.js"
+];
+
 
 export default function About(){
     return (
-        <div style={{ textAlign: "center", marginTop: "30px", fontSize: "20px", fontFamily: "Arial" }}>
+        <div style={{ textAlign: "center", marginTop: "30px", fontSize: "2rem", fontFamily: "Arial" }}>
             <Introducting />
-            <h1 style={{ marginTop: "30px", fontSize: "30px", fontFamily: "Arial" }}>
+            <h4 style={{ marginTop: "30px",  fontSize: "1.9rem", fontFamily: "Arial" }}>
                Skills 
-            </h1>
-            <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, marginTop: 2 }}>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>JavaScript</h3>
+            </h4>
+           <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, marginTop: 2 }}> 
+            {FirstRow.map((skill,index)=>(
+                <Box key={index} sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2, color: 'white', fontSize: "1rem" }}>
+                    <p>{skill}</p>
                 </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>React</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Three.js</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>WebGL</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>ASP.NET</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Mongodb</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Mongoose</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>MsSQL</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Material UI</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>GSAP</h3>
-                </Box>
-                
+            ))}
            </Box>
 
-              <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, marginTop: 2 }}>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Express</h3>
+             <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, marginTop: 2 }}> 
+            {secondRow.map((skill,index)=>(
+                <Box key={index} sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2, color: 'white', fontSize: "1rem" }}>
+                    <p>{skill}</p>
                 </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Rest Api</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Spline</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Azure</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>React Hook Form</h3>
-                </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Particle.js</h3>
-                </Box>
-                
-           </Box>
+            ))}
+           </Box>   
                 <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, marginTop: 2 }}>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>GitHub</h3>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                    <p>GitHub</p>
                 </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Figma</h3>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                    <p>Figma</p>
                 </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>Vercel</h3>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                    <p>Vercel</p>
                 </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "14px" }}>
-                    <h3>PHP</h3>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                    <p>PHP</p>
+                </Box>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                    <p>Blender (3D Modeling)</p>
                 </Box>
                 
            </Box>
@@ -91,7 +75,7 @@ export default function About(){
             <Experiences />
 
              <h1 style={{ marginTop: "30px", fontSize: "30px", fontFamily: "Arial" }}>
-                Experience
+                Education
             </h1>
             <Educationdata />
            
