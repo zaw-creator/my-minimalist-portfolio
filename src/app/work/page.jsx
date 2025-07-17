@@ -1,104 +1,112 @@
 import GitHubCalendar from "react-github-calendar";
-import { Box } from "@mui/material";
+import { Box,Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
+import projects from "../data/projects.jsx"; 
 
-const projects = [
-  {
-    title: "Three.js Room Portfolio",
-    description:
-      "An interactive 3D portfolio showcasing a cozy isometric room built with Three.js and React. Users can explore the room environment where each object (like a laptop, bookshelf, or light) reveals different parts of the developer’s work, skills, or contact links. The experience includes smooth animations, lighting effects, and clickable elements using raycasting.",
-    technologies: [
-      "Three.js",
-      "React",
-      "React Three Fiber",
-      "Blender (3D Modeling)",
-      "GSAP",
-      "JavaScript",
-      "Framer Motion"
-    ],
-
-    liveDemo: "https://portfolio-room-flax.vercel.app/",
-    repo: "https://github.com/your-username/3d-room-portfolio"
-  }
-];
 
 export default function Work() {
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1 style={{ marginTop: "20px" }}>Github Contribution Record</h1>
-      <GitHubCalendar
-        username="zaw-creator"
-        style={{ maxWidth: "700px", margin: "0 auto", marginTop: "20px" }}
-      />
-      <h3 style={{ marginTop: "25px" }}>Projects</h3>
+    <Box sx={{ textAlign: "center", padding: 3 }}>
+      <Typography variant="h4" sx={{ marginTop: 3 }}>
+        Github Contribution Record
+      </Typography>
 
-      {projects.map((project, index) =>
+      <Box sx={{ maxWidth: 860, margin: "20px auto" }}>
+        <GitHubCalendar username="zaw-creator" />
+      </Box>
+
+      <Typography variant="h5" sx={{ marginTop: 4 }}>
+        Projects
+      </Typography>
+
+      {projects.map((project, index) => (
         <Box
           key={index}
           sx={{
             margin: "20px auto",
             maxWidth: "45%",
-            textAlign: "center",
             padding: 2,
             backgroundColor: "#161B22",
             color: "white",
-            borderRadius: 2
+            borderRadius: 2,
+            textAlign: "left"
           }}
         >
-          <h3 style={{ textAlign: "left", marginBottom: "8px" }}>
-            {project.title}
-            <span style={{ marginLeft: "35rem", textAlign: "right" }}>
-              <a
-                href={project.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ marginRight: "10px", color: "white" }}
-              >
-                <GitHubIcon style={{ verticalAlign: "middle" }} />
-              </a>
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LaunchIcon style={{ verticalAlign: "middle" }} />
-              </a>
-            </span>
-          </h3>
-          <p style={{ textAlign: "left", lineHeight: "1.5" }}>
-            {project.description}
-          </p>
+          {/* Title + Icons */}
           <Box
             sx={{
               display: "flex",
-              justifyContent: "left",
-              flexWrap: "wrap",
-              gap: 1.5,
-              marginTop: 2
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: 1
             }}
           >
-            {project.technologies.map((skill, index) =>
-              <Box
-                key={index}
-                sx={{
-                  backgroundColor: "#524f4fb4",
-                  borderRadius: 2,
-                  padding: "6px 12px",
-                  color: "white",
-                  fontSize: "0.85rem",
-                  lineHeight: 1.2,
-                  textAlign: "center"
-                }}
-              >
-                <p style={{ margin: 0 }}>
-                  {skill}
-                </p>
-              </Box>
-            )}
+            <Typography variant="h6">{project.title}</Typography>
+            <Box>
+              {project.repo && (
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginRight: "10px", color: "white" }}
+                >
+                  <GitHubIcon />
+                </a>
+              )}
+              {project.liveDemo && (
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "white" }}
+                >
+                  <LaunchIcon />
+                </a>
+              )}
+            </Box>
+          </Box>
+
+          {/* Description */}
+          <Typography
+            variant="body2"
+            sx={{ lineHeight: 1.5, marginBottom: 2 }}
+          >
+            {project.description}
+          </Typography>
+
+          {/* Tech Skills */}
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 1,
+              alignItems: "flex-start"
+            }}
+          >
+            {project.technologies.map((skill, idx) => (
+              <SkillTag key={idx} label={skill} />
+            ))}
           </Box>
         </Box>
-      )}
-    </div>
+      ))}
+    </Box>
+  );
+}
+
+// Tag Component (optional but reusable)
+function SkillTag({ label }) {
+  return (
+    <Box
+      sx={{
+        backgroundColor: "#524f4fb4",
+        borderRadius: 2,
+        padding: "6px 12px",
+        fontSize: "0.8rem",
+        color: "white"
+      }}
+    >
+      {label}
+    </Box>
   );
 }
