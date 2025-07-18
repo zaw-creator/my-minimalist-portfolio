@@ -25,7 +25,7 @@ export default function Work() {
           key={index}
           sx={{
             margin: "20px auto",
-            maxWidth: "45%",
+            maxWidth: 860,
             padding: 2,
             backgroundColor: "#161B22",
             color: "white",
