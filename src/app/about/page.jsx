@@ -37,7 +37,7 @@ export default function About(){
             </h4>
            <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, marginTop: 2 }}> 
             {FirstRow.map((skill,index)=>(
-                <Box key={index} sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2, color: 'white', fontSize: "1rem" }}>
+                <Box key={index} sx={{ width: 'auto', height: 50, backgroundColor: '#161B22', borderRadius: 2, padding: 2, color: 'white', fontSize: "1rem" }}>
                     <p>{skill}</p>
                 </Box>
             ))}
@@ -45,25 +45,25 @@ export default function About(){
 
              <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, marginTop: 2 }}> 
             {secondRow.map((skill,index)=>(
-                <Box key={index} sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2, color: 'white', fontSize: "1rem" }}>
+                <Box key={index} sx={{ width: 'auto', height: 50, backgroundColor: '#161B22', borderRadius: 2, padding: 2, color: 'white', fontSize: "1rem" }}>
                     <p>{skill}</p>
                 </Box>
             ))}
            </Box>   
                 <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, marginTop: 2 }}>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#161B22', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
                     <p>GitHub</p>
                 </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#161B22', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
                     <p>Figma</p>
                 </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#161B22', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
                     <p>Vercel</p>
                 </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#161B22', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
                     <p>PHP</p>
                 </Box>
-                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#524f4fb4', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
+                <Box sx={{ width: 'auto', height: 50, backgroundColor: '#161B22', borderRadius: 2, padding: 2,color: 'white',fontSize: "1rem" }}>
                     <p>Blender (3D Modeling)</p>
                 </Box>
                 
