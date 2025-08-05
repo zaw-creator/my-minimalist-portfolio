@@ -9,7 +9,7 @@ export default function Work() {
   return (
     <Box sx={{ textAlign: "center", padding: 3 }}>
       <Typography variant="h4" sx={{ marginTop: 3 }}>
-        Github Contribution Record
+        Github Record
       </Typography>
 
       <Box sx={{ maxWidth: 860, margin: "20px auto" }}>
