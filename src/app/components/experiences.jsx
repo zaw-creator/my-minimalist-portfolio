@@ -9,27 +9,28 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 
 const Experiences = [
   {
-    date: "JAN 2025 - PRESENT",
-    company: "Tata Consultancy Services",
-    role: "Product Engineer",
+    date: "DEC 2024 - PRESENT",
+    company: "Freelance Developer",
+    role: "Full Stack Developer",
     description:
-      "Collaborated with a team of developers to design, develop, and enhance features for a web application, ensuring optimal functionality and user experience. Built and optimized UI components using JavaScript, ReactJS, CSS, and jQuery. Developed secure RESTful APIs with Java, Spring Boot and PostgreSQL.",
+      "Working independently on various client projects using the MERN stack and Three.js. Building responsive, interactive web applications and experimenting with 3D experiences. Also involved in backend development and some C# scripting for specialized applications.",
   },
   {
-    date: "JAN 2024 - JUN 2024",
-    company: "Neophyte Ambient Intelligence",
-    role: "Software Engineering Intern",
+    date: "SEP 2023 - JUN 2024",
+    company: "University of the West of England (UWE)",
+    role: "Student Ambassador",
     description:
-      "Worked on web application features using ReactJS, Material UI, Redux, and Tailwind CSS. Deployed Selenium testing with Python on AWS for application feature robustness.",
+      "Developed essential soft skills such as public speaking, teamwork, and interpersonal communication by representing the university. Gained valuable experience in supporting events and engaging with prospective students.",
   },
   {
-    date: "MAY 2023 - JULY 2023",
-    company: "HighRadius",
-    role: "Product Engineering Intern",
+    date: "DEC 2022 - JUN 2023",
+    company: "Wun Wun Lat",
+    role: "Junior Web Developer Intern",
     description:
-      "Helped develop a B2B AI-enabled fintech app to predict global customer order prices. React frontend, Java backend, and scalable architecture.",
-  },
+      "During my internship at Wun Wun Lat, I developed a strong foundation in the syntax, semantics, and pragmatics of programming languages. Worked on real-world projects that enhanced my practical coding skills and collaboration in a team setting. This experience sharpened my problem-solving abilities and deepened my understanding of language design.",
+  }
 ];
+
 
 
 export default function Experiencedata() {

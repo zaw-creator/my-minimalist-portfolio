@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import gsap from "gsap";
+
 
 export default function Home() {
   const textRef = useRef(null);
@@ -31,10 +31,16 @@ export default function Home() {
       };
 
       scrambleStep();
+
+      
     };
 
     const el = textRef.current;
     if (!el) return;
+
+    const intervalId = setInterval(() => {
+      scramble(el, originalText);
+    }, 10000); 
 
     const handle = () => scramble(el, originalText);
 
@@ -42,6 +48,7 @@ export default function Home() {
     el.addEventListener("focus", handle);
 
     return () => {
+      clearInterval(intervalId);
       el.removeEventListener("pointerenter", handle);
       el.removeEventListener("focus", handle);
     };
@@ -87,7 +94,10 @@ export default function Home() {
           View Resume
         </button>
       </a>
+     
+    
 
+    
       <h1
         ref={textRef}
         style={{
@@ -95,6 +105,8 @@ export default function Home() {
           fontSize: "100px",
           fontFamily: "Reddit Mono, monospace",
           cursor: "pointer",
+        
+
         }}
         tabIndex={0}
       >
@@ -111,6 +123,8 @@ export default function Home() {
       >
         {currentTime}
       </span>
-    </div>
+
+      </div>
+   
   );
 }
