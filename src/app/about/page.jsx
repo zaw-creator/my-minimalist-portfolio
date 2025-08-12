@@ -30,7 +30,7 @@ const secondRow = [
 
 export default function About(){
     return (
-        <div style={{ textAlign: "center", marginTop: "30px", fontSize: "2rem", fontFamily: "Arial" }}>
+        <div style={{ textAlign: "center", marginTop: "30px", fontSize: "2rem", fontFamily: "Arial",color: "white" }}>
             <Introducting />
             <h4 style={{ marginTop: "30px",  fontSize: "1.9rem", fontFamily: "Arial",color: "white" }}>
                Skills 
@@ -69,12 +69,12 @@ export default function About(){
                 
            </Box>
 
-            <h1 style={{ marginTop: "30px", fontSize: "30px", fontFamily: "Arial" }}>
+            <h1 style={{ marginTop: "30px", fontSize: "30px", fontFamily: "Arial",color: "white" }}>
                 Experience
             </h1>
             <Experiences />
 
-             <h1 style={{ marginTop: "30px", fontSize: "30px", fontFamily: "Arial" }}>
+             <h1 style={{ marginTop: "30px", fontSize: "30px", fontFamily: "Arial",color: "white" }}>
                 Education
             </h1>
             <Educationdata />

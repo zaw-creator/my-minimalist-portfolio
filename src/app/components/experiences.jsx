@@ -35,7 +35,7 @@ const Experiences = [
 
 export default function Experiencedata() {
     return (
-         <div style={{ alignContent:"left", marginTop: "30px", fontSize: "20px", fontFamily: "Arial" }}>
+         <div style={{ alignContent:"left", marginTop: "30px", fontSize: "20px", fontFamily: "Arial",color: "white" }}>
              <Timeline sx={{ marginLeft: -50}}>
               {
                 Experiences.map((experience, index) => (
