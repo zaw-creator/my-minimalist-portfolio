@@ -105,6 +105,7 @@ export default function Home() {
           fontSize: "100px",
           fontFamily: "Reddit Mono, monospace",
           cursor: "pointer",
+          color: "white",
         
 
         }}
