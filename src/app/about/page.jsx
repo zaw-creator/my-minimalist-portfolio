@@ -32,7 +32,7 @@ export default function About(){
     return (
         <div style={{ textAlign: "center", marginTop: "30px", fontSize: "2rem", fontFamily: "Arial" }}>
             <Introducting />
-            <h4 style={{ marginTop: "30px",  fontSize: "1.9rem", fontFamily: "Arial" }}>
+            <h4 style={{ marginTop: "30px",  fontSize: "1.9rem", fontFamily: "Arial",color: "white" }}>
                Skills 
             </h4>
            <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, marginTop: 2 }}> 

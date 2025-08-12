@@ -8,15 +8,15 @@ import projects from "../data/projects.jsx";
 export default function Work() {
   return (
     <Box sx={{ textAlign: "center", padding: 3 }}>
-      <Typography variant="h4" sx={{ marginTop: 3 }}>
+      <Typography variant="h4" sx={{ marginTop: 3,color: "white" }}>
         Github Record
       </Typography>
 
-      <Box sx={{ maxWidth: 860, margin: "20px auto" }}>
+      <Box sx={{ maxWidth: 860, margin: "20px auto",color: "white" }}>
         <GitHubCalendar username="zaw-creator" />
       </Box>
 
-      <Typography variant="h5" sx={{ marginTop: 4 }}>
+      <Typography variant="h5" sx={{ marginTop: 4,color: "white" }}>
         Projects
       </Typography>
 

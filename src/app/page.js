@@ -120,6 +120,7 @@ export default function Home() {
           marginTop: "1rem",
           fontSize: "1.25rem",
           fontFamily: "Arial",
+          colorq: "white",
         }}
       >
         {currentTime}

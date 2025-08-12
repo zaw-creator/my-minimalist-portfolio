@@ -23,8 +23,8 @@ const links=[{
 export default function Contact() {
     return (
         <div style={{ textAlign: "center" }}>
-            <h1 style={{paddingTop: "20px"}}>Get in Touch with me!</h1>
-            <p style={{paddingTop: "20px"}}>Feel free to reach out to me through any of these platforms below</p>
+            <h1 style={{paddingTop: "20px",color: "white"}}>Get in Touch with me!</h1>
+            <p style={{paddingTop: "20px",color: "white"}}>Feel free to reach out to me through any of these platforms below</p>
 
   <Box
   sx={{
@@ -42,6 +42,7 @@ export default function Contact() {
     maxWidth: 600,
     height: 300,
     mx: "auto",
+    color: "white",
   }}
 >
 {links.map((link,index)=>(
@@ -61,7 +62,7 @@ export default function Contact() {
     }>
 
         <Typography  fontSize={20} >
-            <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+            <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
                 {link.name}
             </a>
         </Typography>

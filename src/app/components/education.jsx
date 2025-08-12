@@ -27,7 +27,7 @@ const Education = [
 
 export default function Educationdata() {
     return (
-         <div style={{ alignContent:"left", marginTop: "30px", fontSize: "20px", fontFamily: "Arial" }}>
+         <div style={{ alignContent:"left", marginTop: "30px", fontSize: "20px", fontFamily: "Arial",color: "white" }}>
              <Timeline sx={{ marginLeft: -50}}>
               {
                 Education.map((education, index) => (
