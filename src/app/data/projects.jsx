@@ -14,7 +14,7 @@ const projects = [
     ],
 
     liveDemo: "https://portfolio-room-flax.vercel.app/",
-    repo: "https://github.com/your-username/3d-room-portfolio"
+    repo: "https://github.com/zaw-creator/my-portfolio-room"
   },
 
   {
@@ -50,7 +50,7 @@ const projects = [
     ],
  
     liveDemo: "https://your-live-demo-link.com", // Replace with actual demo if available
-    repo: "https://github.com/zaw-creator/patient-record-holder"
+    repo: "https://github.com/zaw-creator/patientrecord"
   }
 ];
 export default projects;
