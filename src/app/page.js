@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/next"
 
 
 export default function Home() {
@@ -76,6 +77,7 @@ export default function Home() {
   return (
     <div style={{ textAlign: "center" }}>
       <br />
+      <Analytics/> 
       <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
         <button
           style={{
