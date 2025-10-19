@@ -1,6 +1,6 @@
 const projects = [
   {
-    title: "Three.js Room Portfolio",
+    title: "Three.js Room Portfolio 🛏️",
     description:
       "An interactive 3D portfolio showcasing a cozy isometric room built with Three.js and React. Users can explore the room environment where each object (like a laptop, bookshelf, or light) reveals different parts of the developer’s work, skills, or contact links. The experience includes smooth animations, lighting effects, and clickable elements using raycasting.",
     technologies: [
@@ -35,7 +35,7 @@ const projects = [
   },
 
   {
-    title: "Patient Record Holder",
+    title: "Patient Record Holder 🏥",
     description:
       "A full-stack medical record management system built with the MERN stack. Features include a secure dashboard for managing patient profiles, form-based data entry with validation, and a clean UI powered by Material UI. Designed for efficiency, accessibility, and scalability in clinical environments.",
     technologies: [
@@ -51,6 +51,22 @@ const projects = [
  
     liveDemo: "https://your-live-demo-link.com", // Replace with actual demo if available
     repo: "https://github.com/zaw-creator/patientrecord"
+  },
+    {
+    title: "Freelance Project - Portfolio Website 🎨",
+    description:
+      "A personal portfolio website showcasing my client's skills, projects, and experience. Built with a modern tech stack, this website features a responsive design, smooth animations, and a user-friendly interface.",
+    technologies: [
+      "ReactJS",
+      "NodeJS",
+      "Material UI",
+      "Spline",
+
+    ],
+ 
+    liveDemo: "https://will-portfolio-olive.vercel.app/", // Replace with actual demo if available
+    repo: "https://github.com/zaw-creator/will-portfolio-project"
   }
+  
 ];
 export default projects;
