@@ -2,7 +2,7 @@
 
 A dark, interactive developer portfolio built with Next.js and React. Features animated UI, a live quote feed, GitHub contribution calendar, project showcase with filtering, and a contact page — all running on a star-particle background.
 
-**Live:** [your-portfolio.vercel.app](https://your-portfolio.vercel.app)
+**Live:** [https://my-minimalist-portfolio.vercel.app/](https://my-minimalist-portfolio.vercel.app/)
 
 ---
 
@@ -110,7 +110,7 @@ Open [`src/app/data/projects.jsx`](src/app/data/projects.jsx) and add an entry:
   title: "Project Name",
   description: "What it does.",
   technologies: ["React", "MongoDB"],
-  liveDemo: "https://your-demo.vercel.app",
+  liveDemo: "https://my-minimalist-portfolio.vercel.app/",
   repo: "https://github.com/zaw-creator/your-repo",
   image: "/images/your-screenshot.png",  // optional — drop file in /public/images/
 }
