@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import IconNavbar from "./components/nav";
 import StarParticles from "./particles/starbg";
+import CursorSpotlight from "./components/cursor-spotlight";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`} style={{ boxSizing: "border-box" }}>
           <StarParticles />
+        <CursorSpotlight />
         <IconNavbar />
         {children}
       </body>

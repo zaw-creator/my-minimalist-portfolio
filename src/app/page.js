@@ -8,6 +8,7 @@ export default function Home() {
   const textRef = useRef(null);
   const originalText = "Zaw-Creator";
   const [currentTime, setCurrentTime] = useState("");
+  const [quote, setQuote] = useState({ q: "", a: "" });
 
   // Scramble effect
   useEffect(() => {
@@ -55,6 +56,21 @@ export default function Home() {
     };
   }, []);
 
+  // Fetch random quote on mount
+  useEffect(() => {
+    const fetchQuote = async () => {
+      try {
+        const response = await fetch("/api/quote");
+        const data = await response.json();
+        setQuote({ q: data[0].q, a: data[0].a });
+      } catch (error) {
+        console.log("Error fetching quote:", error);
+      }
+    };
+
+    fetchQuote();
+  }, []);
+
   // Local time updater
   useEffect(() => {
     const updateTime = () => {
@@ -100,21 +116,48 @@ export default function Home() {
     
 
     
-      <h1
-        ref={textRef}
-        style={{
-          marginTop: 250,
-          fontSize: "100px",
-          fontFamily: "Reddit Mono, monospace",
-          cursor: "pointer",
-          color: "white",
-        
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: 250 }}>
+        <h1
+          ref={textRef}
+          style={{
+            fontSize: "100px",
+            fontFamily: "Reddit Mono, monospace",
+            cursor: "pointer",
+            color: "white",
+          }}
+          tabIndex={0}
+        >
+          Zaw-Creator
+        </h1>
+        <span
+          style={{
+            fontSize: "100px",
+            fontFamily: "Reddit Mono, monospace",
+            color: "rgba(255,255,255,0.7)",
+            animation: "blink 1.1s step-end infinite",
+            marginLeft: "6px",
+            userSelect: "none",
+          }}
+        >
+          |
+        </span>
+      </div>
 
+      <div
+        style={{
+          display: "block",
+          marginTop: "2rem",
+          marginBottom: "1rem",
+          fontSize: "1rem",
+          fontFamily: "Arial",
+          color: "#b0b0b0",
+          maxWidth: "600px",
+          margin: "2rem auto 1rem auto",
         }}
-        tabIndex={0}
       >
-        Zaw-Creator
-      </h1>
+        <p style={{ fontStyle: "italic", marginBottom: "0.5rem" }}>"{quote.q}"</p>
+        <p style={{ fontSize: "0.9rem", color: "#808080" }}>— {quote.a}</p>
+      </div>
 
       <span
         style={{

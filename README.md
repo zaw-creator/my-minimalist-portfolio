@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zaw-Creator — Minimalist Portfolio
+
+A dark, interactive developer portfolio built with Next.js and React. Features animated UI, a live quote feed, GitHub contribution calendar, project showcase with filtering, and a contact page — all running on a star-particle background.
+
+**Live:** [your-portfolio.vercel.app](https://your-portfolio.vercel.app)
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+| --- | --- |
+| Framework | Next.js 15 (App Router) |
+| UI | React 19, Material UI v6 |
+| Animations | CSS keyframes, IntersectionObserver |
+| Background | tsparticles (stars preset) |
+| Analytics | Vercel Analytics |
+| Quote API | ZenQuotes (proxied server-side) |
+| Deployment | Vercel |
+
+---
+
+## Pages & Features
+
+### Home (`/`)
+
+- Scramble text effect on the hero name — triggers on hover, focus, and every 10 seconds
+- Blinking cursor next to the hero text
+- Live random quote fetched from ZenQuotes via a server-side proxy (fixes CORS)
+- Local clock updated every minute
+
+### About (`/about`)
+
+- Intro paragraph
+- Color-coded skill tags — each technology has its own color (shared across Work page)
+- Experience timeline — card style with purple hover glow
+- Education timeline — card style with blue hover glow
+- Scroll-triggered fade-in on every section
+
+### Work (`/work`)
+
+- GitHub contribution calendar
+- Stats row — project count, technology count, active since year
+- Scrolling tech ticker — 25 technologies drifting across the page, pauses on hover
+- Filter tabs — All · 3D · Full Stack · Freelance (projects can belong to multiple categories)
+- Project cards — gradient image placeholder on left, content on right, hover glow border, animated top bar, color-coded tech tags
+
+### Contact (`/contact`)
+
+- Email, LinkedIn, GitHub, Discord cards
+- Each card glows in the platform's color on hover
+- Embedded SoundCloud player
+
+### Global
+
+- Cursor spotlight — subtle radial glow that follows the mouse on every page
+- Star particle background
+- Icon navbar with active-state highlighting
+
+---
+
+## Project Structure
+
+```text
+src/app/
+├── page.js                  # Home
+├── about/page.jsx           # About
+├── work/page.jsx            # Work
+├── contact/page.jsx         # Contact
+├── layout.js                # Global layout (navbar, particles, spotlight)
+├── globals.css              # Global styles + keyframe animations
+├── api/quote/route.js       # ZenQuotes server-side proxy
+├── components/
+│   ├── cursor-spotlight.jsx # Mouse follow glow (global)
+│   ├── fade-in.jsx          # Scroll-triggered fade wrapper
+│   ├── project-card.jsx     # Work page project card
+│   ├── tech-ticker.jsx      # Scrolling tech marquee
+│   ├── nav.jsx              # Icon navbar
+│   ├── experiences.jsx      # Experience timeline
+│   └── education.jsx        # Education timeline
+├── data/
+│   ├── projects.jsx         # All project entries
+│   └── tag-colors.js        # Shared color map for tech tags
+└── particles/starbg.jsx     # tsparticles star background
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adding a Project
 
-## Learn More
+Open [`src/app/data/projects.jsx`](src/app/data/projects.jsx) and add an entry:
 
-To learn more about Next.js, take a look at the following resources:
+```js
+{
+  categories: ["Full Stack"],   // "3D" | "Full Stack" | "Freelance" — array, can be multiple
+  title: "Project Name",
+  description: "What it does.",
+  technologies: ["React", "MongoDB"],
+  liveDemo: "https://your-demo.vercel.app",
+  repo: "https://github.com/zaw-creator/your-repo",
+  image: "/images/your-screenshot.png",  // optional — drop file in /public/images/
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If `image` is omitted, a gradient placeholder is shown based on the first category.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Adding a Tech Tag Color
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [`src/app/data/tag-colors.js`](src/app/data/tag-colors.js) and add:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```js
+"YourTech": { bg: "rgba(R,G,B,0.12)", color: "#hexcolor" },
+```
+
+The color map is shared between the Work page cards and the About page skill tags.
+
+---
+
+## Deployment
+
+Deployed on Vercel. Push to `main` to trigger a new deployment.
+
+> Replace the `Live` URL at the top of this file once deployed.
