@@ -155,7 +155,7 @@ export default function Home() {
           margin: "2rem auto 1rem auto",
         }}
       >
-        <p style={{ fontStyle: "italic", marginBottom: "0.5rem" }}>"{quote.q}"</p>
+        <p style={{ fontStyle: "italic", marginBottom: "0.5rem" }}>&ldquo;{quote.q}&rdquo;</p>
         <p style={{ fontSize: "0.9rem", color: "#808080" }}>— {quote.a}</p>
       </div>
 
