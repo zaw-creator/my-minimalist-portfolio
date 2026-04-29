@@ -94,7 +94,7 @@ export default function Home() {
     <div style={{ textAlign: "center" }}>
       <br />
       <Analytics/> 
-      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+      <a href="https://1drv.ms/w/c/51c479cebe32fd28/IQDrphmJZXuHT4BhuazC11q2AVL-vj64fktYiwAyHJg6sY8?e=sQUw2g" target="_blank" rel="noopener noreferrer">
         <button
           style={{
             borderRadius: "30px",
