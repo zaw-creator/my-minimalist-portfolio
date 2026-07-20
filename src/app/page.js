@@ -116,11 +116,11 @@ export default function Home() {
     
 
     
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: 250 }}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "clamp(60px, 15vh, 250px)", flexWrap: "wrap" }}>
         <h1
           ref={textRef}
           style={{
-            fontSize: "100px",
+            fontSize: "clamp(2rem, 12vw, 6.25rem)",
             fontFamily: "Reddit Mono, monospace",
             cursor: "pointer",
             color: "white",
@@ -131,7 +131,7 @@ export default function Home() {
         </h1>
         <span
           style={{
-            fontSize: "100px",
+            fontSize: "clamp(2rem, 12vw, 6.25rem)",
             fontFamily: "Reddit Mono, monospace",
             color: "rgba(255,255,255,0.7)",
             animation: "blink 1.1s step-end infinite",

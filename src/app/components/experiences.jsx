@@ -38,8 +38,8 @@ function ExperienceItem({ experience }) {
 
   return (
     <TimelineItem>
-      <TimelineOppositeContent sx={{ m: 'auto 0', flex: 0.3 }}>
-        <Typography sx={{ fontSize: "0.75rem", color: "white", fontFamily: "monospace", letterSpacing: "0.04em" }}>
+      <TimelineOppositeContent sx={{ m: 'auto 0', flex: { xs: 0.22, sm: 0.3 }, px: { xs: 0.5, sm: 1 } }}>
+        <Typography sx={{ fontSize: { xs: "0.6rem", sm: "0.75rem" }, color: "white", fontFamily: "monospace", letterSpacing: { xs: 0, sm: "0.04em" } }}>
           {experience.date}
         </Typography>
       </TimelineOppositeContent>

@@ -43,7 +43,13 @@ function ContactCard({ link }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", flex: "0 0 calc(50% - 8px)" }}>
+    <Box
+      component="a"
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{ textDecoration: "none", flex: { xs: "1 0 100%", sm: "0 0 calc(50% - 8px)" } }}
+    >
       <Box
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -73,7 +79,7 @@ function ContactCard({ link }) {
           {link.label}
         </Typography>
       </Box>
-    </a>
+    </Box>
   );
 }
 

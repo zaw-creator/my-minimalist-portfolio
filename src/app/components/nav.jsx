@@ -24,7 +24,7 @@ export default function IconNavbar() {
       style={{
         display: "flex",
         justifyContent: "center",
-        gap: "4rem",
+        gap: "clamp(0.75rem, 4vw, 4rem)",
         padding: "1rem",
         backgroundColor: "transparent",
       }}
