@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -33,11 +33,42 @@ const Experiences = [
   },
 ];
 
-function ExperienceItem({ experience }) {
+function ExperienceItem({ experience, index }) {
   const [hovered, setHovered] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const itemRef = useRef(null);
+
+  useEffect(() => {
+    const el = itemRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const fromLeft = index % 2 === 0;
 
   return (
-    <TimelineItem>
+    <TimelineItem
+      ref={itemRef}
+      sx={{
+        opacity: visible ? 1 : 0,
+        transform: visible
+          ? "translateX(0)"
+          : `translateX(${fromLeft ? "-40px" : "40px"})`,
+        transition: "opacity 0.6s ease, transform 0.6s ease",
+      }}
+    >
       <TimelineOppositeContent sx={{ m: 'auto 0', flex: { xs: 0.22, sm: 0.3 }, px: { xs: 0.5, sm: 1 } }}>
         <Typography sx={{ fontSize: { xs: "0.6rem", sm: "0.75rem" }, color: "white", fontFamily: "monospace", letterSpacing: { xs: 0, sm: "0.04em" } }}>
           {experience.date}
@@ -92,7 +123,7 @@ export default function Experiencedata() {
   return (
     <Timeline sx={{ padding: 0 }}>
       {Experiences.map((experience, index) => (
-        <ExperienceItem key={index} experience={experience} />
+        <ExperienceItem key={index} experience={experience} index={index} />
       ))}
     </Timeline>
   );
