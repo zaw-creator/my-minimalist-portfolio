@@ -12,10 +12,10 @@
 
 html,
 body {
- margin: 0;
+  margin: 0;
   padding: 0;
   overflow-x: hidden;  /* prevent horizontal scroll */
-  width: 100vw; 
+  min-height: 100vh;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    position: relative;
+  position: relative;
 }
 
 * {
@@ -32,6 +32,18 @@ body {
   padding: 0;
   margin: 0;
    /* outline: 1px solid red !important; */
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
 }
 
 

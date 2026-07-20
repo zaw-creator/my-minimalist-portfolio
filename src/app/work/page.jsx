@@ -26,7 +26,7 @@ export default function Work() {
         <Typography variant="h4" sx={{ marginTop: 3, color: "white" }}>
           Github Record
         </Typography>
-        <Box sx={{ maxWidth: 860, margin: "20px auto", color: "white" }}>
+        <Box sx={{ maxWidth: 860, margin: "20px auto", color: "white", overflowX: "auto", px: { xs: 1, sm: 0 } }}>
           <GitHubCalendar username="zaw-creator" />
         </Box>
       </FadeIn>
@@ -37,7 +37,8 @@ export default function Work() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            gap: { xs: 3, sm: 6 },
+            flexWrap: "wrap",
+            gap: { xs: 2, sm: 6 },
             margin: "32px auto 8px",
             maxWidth: 860,
           }}

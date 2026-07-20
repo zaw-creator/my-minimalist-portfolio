@@ -91,32 +91,55 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <br />
-      <Analytics/> 
-      <a href="https://1drv.ms/w/c/51c479cebe32fd28/IQDrphmJZXuHT4BhuazC11q2AVL-vj64fktYiwAyHJg6sY8?e=sQUw2g" target="_blank" rel="noopener noreferrer">
-        <button
-          style={{
-            borderRadius: "30px",
-            margin: "10px",
-            padding: "10px 20px",
-            fontFamily: "Arial",
-            fontSize: "16px",
-            border: "1px solid gray",
-            backgroundColor: "transparent",
-            color: "white",
-            cursor: "pointer",
-            
-          }}
-        >
-          View Resume
-        </button>
-      </a>
-     
-    
+    <main
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "0 16px 60px",
+        width: "100%",
+        maxWidth: "980px",
+        margin: "0 auto",
+        textAlign: "center",
+      }}
+    >
+      <Analytics />
 
-    
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "clamp(60px, 15vh, 250px)", flexWrap: "wrap" }}>
+      <div style={{ width: "100%", display: "flex", justifyContent: "center", padding: "18px 0" }}>
+        <a
+          href="https://1drv.ms/w/c/51c479cebe32fd28/IQDrphmJZXuHT4BhuazC11q2AVL-vj64fktYiwAyHJg6sY8?e=sQUw2g"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button
+            style={{
+              borderRadius: "30px",
+              margin: "10px",
+              padding: "12px 18px",
+              minWidth: "160px",
+              fontFamily: "Arial",
+              fontSize: "clamp(0.9rem, 1vw, 1rem)",
+              border: "1px solid gray",
+              backgroundColor: "transparent",
+              color: "white",
+              cursor: "pointer",
+            }}
+          >
+            View Resume
+          </button>
+        </a>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "clamp(60px, 15vh, 250px)",
+          flexWrap: "wrap",
+          gap: "0.5rem",
+        }}
+      >
         <h1
           ref={textRef}
           style={{
@@ -145,14 +168,13 @@ export default function Home() {
 
       <div
         style={{
-          display: "block",
-          marginTop: "2rem",
-          marginBottom: "1rem",
+          width: "100%",
+          maxWidth: "760px",
+          margin: "2rem auto 1rem auto",
           fontSize: "1rem",
           fontFamily: "Arial",
           color: "#b0b0b0",
-          maxWidth: "600px",
-          margin: "2rem auto 1rem auto",
+          padding: "0 12px",
         }}
       >
         <p style={{ fontStyle: "italic", marginBottom: "0.5rem" }}>&ldquo;{quote.q}&rdquo;</p>
@@ -170,8 +192,6 @@ export default function Home() {
       >
         {currentTime}
       </span>
-
-      </div>
-   
+    </main>
   );
 }
