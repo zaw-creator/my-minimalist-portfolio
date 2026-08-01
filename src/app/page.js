@@ -1,50 +1,29 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { scrambleText } from "./utils/scrambleText";
 
 
 export default function Home() {
   const textRef = useRef(null);
+  const timeRef = useRef(null);
+  const quoteRef = useRef(null);
+  const quoteAuthorRef = useRef(null);
   const originalText = "Zaw-Creator";
-  const [currentTime, setCurrentTime] = useState("");
+  const [currentTime, setCurrentTime] = useState("00:00 AM");
   const [quote, setQuote] = useState({ q: "", a: "" });
 
   // Scramble effect
   useEffect(() => {
-    const scramble = (target, text) => {
-      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-      let iterations = 0;
-      const interval = 50;
-
-      const scrambleStep = () => {
-        const scrambled = text
-          .split("")
-          .map((char, i) =>
-            i < iterations ? char : chars[Math.floor(Math.random() * chars.length)]
-          )
-          .join("");
-        target.textContent = scrambled;
-
-        if (iterations <= text.length) {
-          iterations++;
-          setTimeout(scrambleStep, interval);
-        }
-      };
-
-      scrambleStep();
-
-      
-    };
-
     const el = textRef.current;
     if (!el) return;
 
     const intervalId = setInterval(() => {
-      scramble(el, originalText);
-    }, 10000); 
+      scrambleText(el, originalText);
+    }, 10000);
 
-    const handle = () => scramble(el, originalText);
+    const handle = () => scrambleText(el, originalText);
 
     el.addEventListener("pointerenter", handle);
     el.addEventListener("focus", handle);
@@ -70,6 +49,42 @@ export default function Home() {
 
     fetchQuote();
   }, []);
+
+  useEffect(() => {
+    const timeEl = timeRef.current;
+    const quoteEl = quoteRef.current;
+    const authorEl = quoteAuthorRef.current;
+
+    if (!timeEl || !quoteEl || !authorEl) return;
+
+    const triggerTimeScramble = () => {
+      if (currentTime) scrambleText(timeEl, currentTime);
+    };
+
+    const triggerQuoteScramble = () => {
+      if (quote.q) scrambleText(quoteEl, `“${quote.q}”`);
+    };
+
+    const triggerAuthorScramble = () => {
+      if (quote.a) scrambleText(authorEl, `— ${quote.a}`);
+    };
+
+    timeEl.addEventListener("pointerenter", triggerTimeScramble);
+    quoteEl.addEventListener("pointerenter", triggerQuoteScramble);
+    authorEl.addEventListener("pointerenter", triggerAuthorScramble);
+    timeEl.addEventListener("focus", triggerTimeScramble);
+    quoteEl.addEventListener("focus", triggerQuoteScramble);
+    authorEl.addEventListener("focus", triggerAuthorScramble);
+
+    return () => {
+      timeEl.removeEventListener("pointerenter", triggerTimeScramble);
+      quoteEl.removeEventListener("pointerenter", triggerQuoteScramble);
+      authorEl.removeEventListener("pointerenter", triggerAuthorScramble);
+      timeEl.removeEventListener("focus", triggerTimeScramble);
+      quoteEl.removeEventListener("focus", triggerQuoteScramble);
+      authorEl.removeEventListener("focus", triggerAuthorScramble);
+    };
+  }, [currentTime, quote.q, quote.a]);
 
   // Local time updater
   useEffect(() => {
@@ -177,18 +192,33 @@ export default function Home() {
           padding: "0 12px",
         }}
       >
-        <p style={{ fontStyle: "italic", marginBottom: "0.5rem" }}>&ldquo;{quote.q}&rdquo;</p>
-        <p style={{ fontSize: "0.9rem", color: "#808080" }}>— {quote.a}</p>
+        <p
+          ref={quoteRef}
+          style={{ fontStyle: "italic", marginBottom: "0.5rem", cursor: "pointer" }}
+          tabIndex={0}
+        >
+          {quote.q}
+        </p>
+        <p
+          ref={quoteAuthorRef}
+          style={{ fontSize: "0.9rem", color: "#808080", cursor: "pointer" }}
+          tabIndex={0}
+        >
+          {quote.a}
+        </p>
       </div>
 
       <span
+        ref={timeRef}
         style={{
           display: "block",
           marginTop: "1rem",
           fontSize: "1.25rem",
           fontFamily: "Arial",
           color: "white",
+          cursor: "pointer",
         }}
+        tabIndex={0}
       >
         {currentTime}
       </span>

@@ -1,18 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import IconNavbar from "./components/nav";
 import StarParticles from "./particles/starbg";
 import CursorSpotlight from "./components/cursor-spotlight";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -22,8 +11,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`} style={{ boxSizing: "border-box" }}>
-          <StarParticles />
+      <body style={{ boxSizing: "border-box", fontFamily: "Arial, Helvetica, sans-serif" }}>
+        <StarParticles />
         <CursorSpotlight />
         <IconNavbar />
         {children}
