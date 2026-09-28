@@ -15,7 +15,7 @@ const Experiences = [
     company: "Freelance Developer",
     role: "Full Stack Developer",
     description:
-      "Working independently on various client projects using the MERN stack and Three.js. Building responsive, interactive web applications and experimenting with 3D experiences. Also involved in backend development and some C# scripting for specialized applications.",
+      "Working independently on client projects using the MERN stack and Three.js, including DRIFTLAND (a motorsport event management platform for NYOKI DRIFT), AUTOCULT (a car community platform for Yangon Nation), and a charity site renovation for Let Pan Pwint. Building responsive, interactive web applications and experimenting with 3D experiences, alongside backend development and some C# scripting for specialized applications.",
   },
   {
     date: "SEP 2023 - JUN 2024",

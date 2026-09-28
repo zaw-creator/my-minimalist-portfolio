@@ -14,7 +14,8 @@ const SKILLS = [
   "Mongodb", "Mongoose", "MsSQL", "Material UI", "GSAP",
   "Express", "Rest Api", "Spline", "Azure", "React Hook Form",
   "Particle.js", "GitHub", "Figma", "Vercel", "PHP",
-  "Blender (3D Modeling)",
+  "Blender (3D Modeling)", "AWS", "Python", "Docker",
+  "Machine Learning", "Linux", "CI/CD",
 ];
 
 function SectionHeading({ children }) {

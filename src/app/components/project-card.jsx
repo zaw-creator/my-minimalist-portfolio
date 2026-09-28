@@ -7,9 +7,10 @@ import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import TAG_COLORS, { DEFAULT_TAG } from "../data/tag-colors";
 
 const CATEGORY_GRADIENTS = {
-  "3D":         "linear-gradient(145deg, #1a0533, #3b1275, #0f0620)",
-  "Full Stack": "linear-gradient(145deg, #0a1628, #0d3a5c, #071020)",
-  "Freelance":  "linear-gradient(145deg, #1a0f28, #3d1a60, #0f0818)",
+  "3D":               "linear-gradient(145deg, #1a0533, #3b1275, #0f0620)",
+  "Full Stack":       "linear-gradient(145deg, #0a1628, #0d3a5c, #071020)",
+  "Freelance":        "linear-gradient(145deg, #1a0f28, #3d1a60, #0f0818)",
+  "Machine Learning": "linear-gradient(145deg, #051a14, #0d4a35, #062018)",
 };
 const DEFAULT_GRADIENT = "linear-gradient(145deg, #161b22, #21262d)";
 

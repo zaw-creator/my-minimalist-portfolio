@@ -11,6 +11,13 @@ import { Box, Typography } from '@mui/material';
 
 const Education = [
   {
+    date: "AUG 2026 - PRESENT",
+    institution: "Asian Institute of Technology (AIT), Thailand",
+    degree: "MSc in Data Science and Artificial Intelligence (In Progress)",
+    description:
+      "Pursuing a scholarship-supported Master's in Data Science and Artificial Intelligence, coursework spanning machine learning, human-computer interaction, and applied data science. Building on a foundation in cloud engineering to work toward a career in cloud/AI infrastructure within the tech and financial sector in Singapore.",
+  },
+  {
     date: "April 2026 - PRESENT",
     institution: "Amazon Web Services (AWS)",
     degree: "AWS Certified Cloud Practitioner (In Progress)",

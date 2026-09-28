@@ -6,7 +6,7 @@ import ProjectCard from "../components/project-card";
 import TechTicker from "../components/tech-ticker";
 import projects from "../data/projects.jsx";
 
-const FILTERS = ["All", "3D", "Full Stack", "Freelance"];
+const FILTERS = ["All", "3D", "Full Stack", "Freelance", "Machine Learning"];
 
 const totalTechs = new Set(projects.flatMap((p) => p.technologies)).size;
 

@@ -1,5 +1,24 @@
 const projects = [
   {
+    categories: ["Machine Learning"],
+    title: "Predicting Car Price — ML Model Comparison + Deployment 🚘",
+    image: "/images/carprice.png",
+    description:
+      "An AIT Machine Learning course project predicting used-car prices from ~8,100 listings. Cleaned and explored the data, then compared Linear Regression, Decision Tree, and Random Forest models (Random Forest won, R² 0.975), wrapped in a Dash web app for instant price estimates. For the follow-up assignment, built a linear regression model entirely from scratch — hand-coded gradient descent with Ridge/Lasso variants and momentum, tuned via a 144-run MLflow-tracked grid search (R² ≈ 0.92) — and deployed it as a second page on the same app, plus standalone via Docker and Traefik on AIT's own ml-brain server.",
+    technologies: [
+      "Python",
+      "Pandas",
+      "scikit-learn",
+      "Dash",
+      "MLflow",
+      "Docker",
+      "Traefik",
+    ],
+    liveDemo: "https://chaky-car-price-predictor.onrender.com/",
+    repo: "https://github.com/zaw-creator/A1_predicting_car_price"
+  },
+
+  {
     categories: ["3D"],
     title: "Three.js Room Portfolio 🛏️",
     image: "/images/room.png",
@@ -76,6 +95,34 @@ const projects = [
     ],
     liveDemo: "https://nyokidrift.vercel.app",
     repo: "https://github.com/zaw-creator/DRIFTLAND"
+  },
+
+  {
+    categories: ["Full Stack", "Freelance"],
+    title: "AUTOCULT — Yangon Nation Car Community 🚗",
+    description:
+      "A freelance car community platform for Yangon Nation, scoped as the first of a five-phase roadmap. Phase 1 covers member registration, laying the groundwork for a full community platform for car enthusiasts.",
+    technologies: [
+      "ReactJS",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+    ],
+  },
+
+  {
+    categories: ["Full Stack", "Freelance"],
+    title: "Let Pan Pwint — Charity Website Renovation 🌸",
+    description:
+      "A website renovation for Let Pan Pwint, a UK-based Myanmar relief organisation. Features an interactive 3D globe with city markers built in Three.js, a public site, a member-exclusive area with a game-style join mechanic, and an admin portal, all in the organisation's crimson-and-rose branding.",
+    technologies: [
+      "ReactJS",
+      "Three.js",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+    ],
   },
 
   {

@@ -35,6 +35,14 @@ const TAG_COLORS = {
   "GitHub":               { bg: "rgba(255,255,255,0.06)",  color: "#e2e2e2" },
   "Figma":                { bg: "rgba(162,89,255,0.12)",   color: "#a259ff" },
   "Vercel":               { bg: "rgba(255,255,255,0.06)",  color: "#e2e2e2" },
+  "AWS":                  { bg: "rgba(255,153,0,0.12)",    color: "#ff9900" },
+  "Python":               { bg: "rgba(53,114,165,0.12)",   color: "#4b8bbe" },
+  "Docker":               { bg: "rgba(13,141,235,0.12)",   color: "#2496ed" },
+  "Pandas":               { bg: "rgba(23,103,154,0.12)",   color: "#4d9fc4" },
+  "scikit-learn":         { bg: "rgba(247,147,26,0.12)",   color: "#f7931e" },
+  "Dash":                 { bg: "rgba(0,204,150,0.12)",    color: "#00cc96" },
+  "MLflow":               { bg: "rgba(2,143,201,0.12)",    color: "#0194e2" },
+  "Traefik":              { bg: "rgba(36,193,222,0.12)",   color: "#24c1de" },
 };
 
 export const DEFAULT_TAG = { bg: "rgba(82,79,79,0.5)", color: "#bbb" };

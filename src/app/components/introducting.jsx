@@ -1,9 +1,9 @@
 "use client";
 import WordFadeIn from "./word-fade-in";
 
-const LINE_1 = "A recent IT graduate with a strong foundation in web development and a focus on creating interactive 3D websites using";
-const LINE_2 = "Three.js and React. Skilled in modern front-end technologies including";
-const LINE_3 = "HTML, CSS, JavaScript, React, and Three.js.";
+const LINE_1 = "A MERN stack developer with a background in interactive 3D web experiences, now pursuing a Master's in";
+const LINE_2 = "Data Science and Artificial Intelligence at AIT while transitioning toward cloud engineering and DevOps —";
+const LINE_3 = "working toward a career in the tech and financial sector in Singapore.";
 
 export default function Introducting() {
     return(
