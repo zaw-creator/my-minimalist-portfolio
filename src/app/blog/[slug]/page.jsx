@@ -42,19 +42,32 @@ export default function BlogPost({ params }) {
           {post.excerpt}
         </Typography>
 
-        <Box
-          sx={{
-            background: "#12161c",
-            border: "1px solid rgba(255,255,255,0.07)",
-            borderRadius: "14px",
-            padding: "28px",
-            textAlign: "center",
-            color: "#666",
-            fontSize: "0.95rem",
-          }}
-        >
-          Full write-up coming soon.
-        </Box>
+        {post.content ? (
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "22px" }}>
+            {post.content.map((paragraph, index) => (
+              <Typography
+                key={index}
+                sx={{ color: "#cfd3d8", fontSize: "1.02rem", lineHeight: 1.85 }}
+              >
+                {paragraph}
+              </Typography>
+            ))}
+          </Box>
+        ) : (
+          <Box
+            sx={{
+              background: "#12161c",
+              border: "1px solid rgba(255,255,255,0.07)",
+              borderRadius: "14px",
+              padding: "28px",
+              textAlign: "center",
+              color: "#666",
+              fontSize: "0.95rem",
+            }}
+          >
+            Full write-up coming soon.
+          </Box>
+        )}
       </FadeIn>
     </Box>
   );

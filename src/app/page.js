@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { scrambleText } from "./utils/scrambleText";
+import NoticeBoard from "./components/notice-board";
 
 
 export default function Home() {
@@ -119,6 +120,7 @@ export default function Home() {
       }}
     >
       <Analytics />
+      <NoticeBoard />
 
       <div style={{ width: "100%", display: "flex", justifyContent: "center", padding: "18px 0" }}>
         <a
