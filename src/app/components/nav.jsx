@@ -8,12 +8,14 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
+import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 
 // Define the nav items
 const navItems = [
   { label: "Home", icon: <HomeOutlinedIcon />, path: "/" },
   { label: "About", icon: <InfoOutlinedIcon />, path: "/about" },
   { label: "Work", icon: <WorkOutlineOutlinedIcon />, path: "/work" },
+  { label: "Blog", icon: <ArticleOutlinedIcon />, path: "/blog" },
   { label: "Contact", icon: <ContactMailOutlinedIcon />, path: "/contact" },
 ];
 
