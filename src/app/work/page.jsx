@@ -91,12 +91,12 @@ export default function Work() {
                 padding: "7px 20px",
                 borderRadius: "20px",
                 border: filter === f
-                  ? "1px solid rgba(139,92,246,0.7)"
+                  ? "1px solid rgba(255,255,255,0.4)"
                   : "1px solid rgba(255,255,255,0.1)",
                 backgroundColor: filter === f
-                  ? "rgba(139,92,246,0.18)"
+                  ? "rgba(255,255,255,0.12)"
                   : "transparent",
-                color: filter === f ? "#c084fc" : "#888",
+                color: filter === f ? "#ffffff" : "#888",
                 cursor: "pointer",
                 fontSize: "0.88rem",
                 fontFamily: "Arial",

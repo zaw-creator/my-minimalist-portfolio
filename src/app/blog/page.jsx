@@ -19,7 +19,7 @@ export default function Blog() {
               fontWeight: 700,
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "#7c3aed",
+              color: "#888",
               mb: 0.5,
             }}
           >
@@ -66,7 +66,7 @@ export default function Blog() {
                 transition: "box-shadow 0.25s ease, transform 0.2s ease",
                 "&:hover": {
                   transform: "translateY(-2px)",
-                  boxShadow: "0 0 0 1px rgba(0,226,168,0.35), 0 10px 32px rgba(0,226,168,0.12)",
+                  boxShadow: "0 0 0 1px rgba(255,255,255,0.35), 0 10px 32px rgba(255,255,255,0.1)",
                 },
               }}
             >
@@ -77,8 +77,8 @@ export default function Blog() {
                     fontWeight: 700,
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",
-                    color: "#062018",
-                    backgroundColor: "#00e2a8",
+                    color: "#000000",
+                    backgroundColor: "#ffffff",
                     padding: "5px 12px",
                     borderRadius: "999px",
                   }}
@@ -98,7 +98,7 @@ export default function Blog() {
               <Typography sx={{ color: "#9aa0a6", fontSize: "1rem", lineHeight: 1.7, maxWidth: 760 }}>
                 {featured.excerpt}
               </Typography>
-              <Box sx={{ display: "flex", alignItems: "center", gap: "6px", mt: "6px", color: "#00e2a8", fontSize: "0.92rem", fontWeight: 600 }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: "6px", mt: "6px", color: "#ffffff", fontSize: "0.92rem", fontWeight: 600 }}>
                 Read more <span>&rarr;</span>
               </Box>
             </Box>

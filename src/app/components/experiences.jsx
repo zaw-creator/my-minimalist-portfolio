@@ -79,9 +79,9 @@ function ExperienceItem({ experience, index }) {
         <TimelineConnector sx={{ bgcolor: '#2a2a2a' }} />
         <TimelineDot
           sx={{
-            bgcolor: hovered ? '#7c3aed' : '#1e1e2e',
-            border: `2px solid ${hovered ? '#7c3aed' : '#333'}`,
-            boxShadow: hovered ? '0 0 12px rgba(124,58,237,0.6)' : 'none',
+            bgcolor: hovered ? '#ffffff' : '#1e1e2e',
+            border: `2px solid ${hovered ? '#ffffff' : '#333'}`,
+            boxShadow: hovered ? '0 0 12px rgba(255,255,255,0.5)' : 'none',
             transition: 'all 0.3s ease',
           }}
         />
@@ -100,14 +100,14 @@ function ExperienceItem({ experience, index }) {
             mb: 2,
             transition: "box-shadow 0.3s ease",
             boxShadow: hovered
-              ? "0 0 0 1px rgba(124,58,237,0.45), 0 8px 24px rgba(124,58,237,0.12)"
+              ? "0 0 0 1px rgba(255,255,255,0.4), 0 8px 24px rgba(255,255,255,0.1)"
               : "0 0 0 1px rgba(255,255,255,0.06)",
           }}
         >
           <Typography sx={{ fontWeight: 700, fontSize: "1rem", color: "white", mb: 0.3 }}>
             {experience.company}
           </Typography>
-          <Typography sx={{ fontSize: "0.82rem", color: "#7c3aed", fontWeight: 500, mb: 1 }}>
+          <Typography sx={{ fontSize: "0.82rem", color: "#cfcfcf", fontWeight: 500, mb: 1 }}>
             {experience.role}
           </Typography>
           <Typography sx={{ fontSize: "0.85rem", color: "#888", lineHeight: 1.65 }}>

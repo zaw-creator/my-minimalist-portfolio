@@ -61,8 +61,8 @@ export default function NoticeBoard() {
               width: "7px",
               height: "7px",
               borderRadius: "50%",
-              background: "#00e2a8",
-              boxShadow: "0 0 6px #00e2a8",
+              background: "#ffffff",
+              boxShadow: "0 0 6px rgba(255,255,255,0.6)",
             }}
           />
           <span
@@ -143,7 +143,7 @@ export default function NoticeBoard() {
       </div>
 
       <Link href="/blog" style={{ textDecoration: "none" }}>
-        <div style={{ textAlign: "center", padding: "11px", fontSize: "0.8rem", fontWeight: 600, color: "#00e2a8" }}>
+        <div style={{ textAlign: "center", padding: "11px", fontSize: "0.8rem", fontWeight: 600, color: "#ffffff" }}>
           View all &rarr;
         </div>
       </Link>

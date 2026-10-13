@@ -6,17 +6,12 @@ import LaunchIcon from "@mui/icons-material/Launch";
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import TAG_COLORS, { DEFAULT_TAG } from "../data/tag-colors";
 
-const CATEGORY_GRADIENTS = {
-  "3D":               "linear-gradient(145deg, #1a0533, #3b1275, #0f0620)",
-  "Full Stack":       "linear-gradient(145deg, #0a1628, #0d3a5c, #071020)",
-  "Freelance":        "linear-gradient(145deg, #1a0f28, #3d1a60, #0f0818)",
-  "Machine Learning": "linear-gradient(145deg, #051a14, #0d4a35, #062018)",
-};
+// Monochrome placeholder gradient — no per-category hue, white/black/grey only.
 const DEFAULT_GRADIENT = "linear-gradient(145deg, #161b22, #21262d)";
 
 export default function ProjectCard({ project }) {
   const [hovered, setHovered] = useState(false);
-  const gradient = CATEGORY_GRADIENTS[project.categories?.[0]] || DEFAULT_GRADIENT;
+  const gradient = DEFAULT_GRADIENT;
 
   return (
     <Box
@@ -35,7 +30,7 @@ export default function ProjectCard({ project }) {
         overflow: "hidden",
         transition: "box-shadow 0.3s ease",
         boxShadow: hovered
-          ? "0 0 0 1px rgba(139,92,246,0.5), 0 12px 40px rgba(139,92,246,0.18)"
+          ? "0 0 0 1px rgba(255,255,255,0.4), 0 12px 40px rgba(255,255,255,0.1)"
           : "0 0 0 1px rgba(255,255,255,0.06)",
       }}
     >
@@ -47,7 +42,7 @@ export default function ProjectCard({ project }) {
           left: 0,
           height: "2px",
           width: hovered ? "100%" : "0%",
-          background: "linear-gradient(90deg, #7c3aed, #2563eb, #06b6d4)",
+          background: "linear-gradient(90deg, rgba(255,255,255,0.15), #ffffff, rgba(255,255,255,0.15))",
           transition: "width 0.45s ease",
           zIndex: 1,
         }}

@@ -14,28 +14,28 @@ const links = [
     url: "mailto:hanzaw362@gmail.com",
     icon: <EmailOutlinedIcon sx={{ fontSize: 32 }} />,
     label: "hanzaw362@gmail.com",
-    color: "#f87171",
+    color: "#cfcfcf",
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/zaw333/",
     icon: <LinkedInIcon sx={{ fontSize: 32 }} />,
     label: "zaw-creator",
-    color: "#60a5fa",
+    color: "#cfcfcf",
   },
   {
     name: "GitHub",
     url: "https://www.github.com/zaw-creator/",
     icon: <GitHubIcon sx={{ fontSize: 32 }} />,
     label: "zaw-creator",
-    color: "#e2e2e2",
+    color: "#cfcfcf",
   },
   {
     name: "Discord",
     url: "https://discordapp.com/users/607608447671861249",
     icon: <ForumOutlinedIcon sx={{ fontSize: 32 }} />,
     label: "Message me",
-    color: "#a78bfa",
+    color: "#cfcfcf",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function Contact() {
     <Box sx={{ textAlign: "center", padding: "40px 24px 60px", maxWidth: 600, margin: "0 auto" }}>
 
       <FadeIn>
-        <Typography sx={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.2em", color: "#7c3aed", mb: 0.5 }}>
+        <Typography sx={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.2em", color: "#888", mb: 0.5 }}>
           ——
         </Typography>
         <Typography variant="h4" sx={{ color: "white", fontWeight: 700, mb: 1 }}>

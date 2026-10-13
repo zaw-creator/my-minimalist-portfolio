@@ -55,9 +55,9 @@ function EducationItem({ education }) {
         <TimelineConnector sx={{ bgcolor: '#2a2a2a' }} />
         <TimelineDot
           sx={{
-            bgcolor: hovered ? '#2563eb' : '#1e1e2e',
-            border: `2px solid ${hovered ? '#2563eb' : '#333'}`,
-            boxShadow: hovered ? '0 0 12px rgba(37,99,235,0.6)' : 'none',
+            bgcolor: hovered ? '#ffffff' : '#1e1e2e',
+            border: `2px solid ${hovered ? '#ffffff' : '#333'}`,
+            boxShadow: hovered ? '0 0 12px rgba(255,255,255,0.5)' : 'none',
             transition: 'all 0.3s ease',
           }}
         />
@@ -76,14 +76,14 @@ function EducationItem({ education }) {
             mb: 2,
             transition: "box-shadow 0.3s ease",
             boxShadow: hovered
-              ? "0 0 0 1px rgba(37,99,235,0.45), 0 8px 24px rgba(37,99,235,0.12)"
+              ? "0 0 0 1px rgba(255,255,255,0.4), 0 8px 24px rgba(255,255,255,0.1)"
               : "0 0 0 1px rgba(255,255,255,0.06)",
           }}
         >
           <Typography sx={{ fontWeight: 700, fontSize: "1rem", color: "white", mb: 0.3 }}>
             {education.institution}
           </Typography>
-          <Typography sx={{ fontSize: "0.82rem", color: "#2563eb", fontWeight: 500, mb: 1 }}>
+          <Typography sx={{ fontSize: "0.82rem", color: "#cfcfcf", fontWeight: 500, mb: 1 }}>
             {education.degree}
           </Typography>
           <Typography sx={{ fontSize: "0.85rem", color: "#888", lineHeight: 1.65 }}>

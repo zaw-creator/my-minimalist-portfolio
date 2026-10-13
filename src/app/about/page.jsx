@@ -27,7 +27,7 @@ function SectionHeading({ children }) {
           fontWeight: 700,
           letterSpacing: "0.2em",
           textTransform: "uppercase",
-          color: "#7c3aed",
+          color: "#888",
           mb: 0.5,
         }}
       >
