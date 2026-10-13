@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import GitHubCalendar from "react-github-calendar";
 import { Box, Typography } from "@mui/material";
 import FadeIn from "../components/fade-in";
 import ProjectCard from "../components/project-card";
@@ -26,9 +27,11 @@ export default function Work() {
           Github Record
         </Typography>
         <Box sx={{ maxWidth: 860, margin: "20px auto", color: "white", overflowX: "auto", px: { xs: 1, sm: 0 } }}>
-          <Typography sx={{ color: "#888", fontSize: "0.95rem" }}>
-            GitHub activity is currently unavailable in this local build.
-          </Typography>
+          <GitHubCalendar
+            username="zaw-creator"
+            colorScheme="dark"
+            theme={{ dark: ["#161616", "#3a3a3a", "#6b6b6b", "#a8a8a8", "#ffffff"] }}
+          />
         </Box>
       </FadeIn>
 
